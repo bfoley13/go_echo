@@ -1,21 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: goecho
+  name: testworkflow
   labels:
-    app: goecho
+    app: testworkflow
+  namespace: namespace-workflow-1691526923756
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: goecho
+      app: testworkflow
   template:
     metadata:
       labels:
-        app: goecho
+        app: testworkflow
     spec:
       containers:
-        - name: nginx
-          image: echointregistry.azurecr.io/goechotest
+        - name: testworkflow
+          image: acrworkflow1691526923756.azurecr.io/image-workflow-1691526923756:latest
           ports:
-            - containerPort: 1323
+            - containerPort: 8080
