@@ -1,22 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: test-go-echo
+  name: my-test-workflow
   labels:
-    app: test-go-echo
-  namespace: namespace-workflow-1714760696267
+    app: my-test-workflow
+    kubernetes.azure.com/generator: devhub
+  namespace: namespace-workflow-1719508233844
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: test-go-echo
+      app: my-test-workflow
   template:
     metadata:
       labels:
-        app: test-go-echo
+        app: my-test-workflow
     spec:
       containers:
-        - name: test-go-echo
-          image: acrworkflow1714760696267.azurecr.io/image-workflow-1714760696267:latest
+        - name: my-test-workflow
+          image: acrworkflow1719508233844.azurecr.io/image-workflow-1719508233844:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 80

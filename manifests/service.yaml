@@ -1,12 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: test-go-echo
-  namespace: namespace-workflow-1714760696267
+  name: my-test-workflow
+  namespace: namespace-workflow-1719508233844
+  labels:
+    kubernetes.azure.com/generator: devhub
 spec:
   type: LoadBalancer
   selector:
-    app: test-go-echo
+    app: my-test-workflow
   ports:
     - protocol: TCP
       port: 80
