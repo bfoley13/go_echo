@@ -1,22 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: test-go-echo
+  name: test-westus2
   labels:
-    app: test-go-echo
-  namespace: namespace-workflow-1714760696267
+    app: test-westus2
+    kubernetes.azure.com/generator: devhub
+  namespace: namespace-workflow-1723219484505
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: test-go-echo
+      app: test-westus2
   template:
     metadata:
       labels:
-        app: test-go-echo
+        app: test-westus2
     spec:
       containers:
-        - name: test-go-echo
-          image: acrworkflow1714760696267.azurecr.io/image-workflow-1714760696267:latest
+        - name: test-westus2
+          image: acrworkflow1723219484505.azurecr.io/image-workflow-1723219484505:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
