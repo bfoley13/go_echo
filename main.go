@@ -29,5 +29,5 @@ func main() {
 	e.GET("*", getGhost)
 
 	// Start server
-	e.Logger.Fatal(e.Start(":80"))
+	e.Logger.Fatal(e.Start(":1323"))
 }
