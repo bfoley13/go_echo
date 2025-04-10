@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: goecho1-config
+  namespace: namespace-workflow-1744310652315
+  labels:
+    app.kubernetes.io/name: goecho1
+    kubernetes.azure.com/generator: devhub
+data:
