@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: another-test-rg-workflow-config
+  namespace: namespace-workflow-1745246524548
+  labels:
+    app.kubernetes.io/name: another-test-rg-workflow
+    kubernetes.azure.com/generator: devhub
+data:
