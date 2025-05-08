@@ -6,6 +6,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
     - name: Run rag update
       uses: bfoley13/update-rag-action@main
       with:
