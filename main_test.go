@@ -35,6 +35,7 @@ func TestGetEcho(t *testing.T) {
 	c.SetParamNames("statement")
 	c.SetParamValues("statement")
 
+	// random comment
 	// Assertions
 	if assert.NoError(t, getEcho(c)) {
 		assert.Equal(t, http.StatusOK, rec.Code)

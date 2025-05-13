@@ -28,9 +28,6 @@ func main() {
 	e.GET("/echo/:statement", getEcho)
 	e.GET("*", getGhost)
 
-	fmt.Println("Server is running on port 1323")
-	fmt.Println("Another log")
-
 	// Start server
 	e.Logger.Fatal(e.Start(":1323"))
 }
