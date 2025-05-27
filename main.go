@@ -28,6 +28,8 @@ func main() {
 	e.GET("/echo/:statement", getEcho)
 	e.GET("*", getGhost)
 
+	// adding comment for test
+	// adding more
 	// Start server
 	e.Logger.Fatal(e.Start(":1323"))
 }
