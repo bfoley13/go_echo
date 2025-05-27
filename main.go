@@ -29,7 +29,7 @@ func main() {
 	e.GET("*", getGhost)
 
 	// adding comment for test
-	// adding more
+	// adding more test comments
 	// Start server
 	e.Logger.Fatal(e.Start(":1323"))
 }
