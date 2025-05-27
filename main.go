@@ -28,6 +28,7 @@ func main() {
 	e.GET("/echo/:statement", getEcho)
 	e.GET("*", getGhost)
 
+	// adding comment for test
 	// Start server
 	e.Logger.Fatal(e.Start(":1323"))
 }
